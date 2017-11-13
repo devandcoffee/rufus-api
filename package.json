@@ -1,0 +1,42 @@
+{
+  "name": "rufus-api",
+  "version": "1.0.0",
+  "description": "Api to handle jobs workers and customers relationships",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devandcoffee/rufus-api.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devandcoffee/rufus-api/issues"
+  },
+  "homepage": "https://github.com/devandcoffee/rufus-api#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "apollo-server-express": "^1.2.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "graphql": "^0.11.7",
+    "graphql-tools": "^2.7.2",
+    "lodash": "^4.17.4",
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.22.6"
+  }
+}
