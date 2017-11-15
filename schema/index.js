@@ -1,13 +1,16 @@
 import { makeExecutableSchema } from 'graphql-tools';
+import resolvers from '../resolvers';
+import User from './User';
 
 const rootQuery = `
   type Query {
-    test: String!
+    users: [User]
   }
 `;
 
 const schema = makeExecutableSchema({
-  typeDefs: [rootQuery],
+  typeDefs: [rootQuery, User],
+  resolvers,
 });
 
 export default schema;
