@@ -4,7 +4,7 @@ const services = require('../../services');
 
 module.exports = {
   up: () => {
-    const promises = Array(10).fill().map(() => {
+    const promises = Array(100).fill().map(() => {
       return services.encryptPassword('secret').then((hash) => {
         return user.create({
           email: casual.email,

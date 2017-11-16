@@ -6,9 +6,13 @@ module.exports = {
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
-    date: {
-      type: Sequelize.DATE,
+    worker_id: {
+      type: Sequelize.INTEGER,
       allowNull: false,
+      references: {
+        model: 'workers',
+        key: 'id',
+      },
     },
     customer_id: {
       type: Sequelize.INTEGER,
@@ -18,31 +22,24 @@ module.exports = {
         key: 'id',
       },
     },
-    worker_id: {
-      type: Sequelize.INTEGER,
+    date: {
+      type: Sequelize.DATE,
       allowNull: false,
-      references: {
-        model: 'workers',
-        key: 'id',
-      },
     },
     address: {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    description: {
-      type: Sequelize.STRING,
+    rated_worker: {
+      type: Sequelize.FLOAT,
     },
     rated_customer: {
       type: Sequelize.FLOAT,
     },
-    rated_worker: {
-      type: Sequelize.FLOAT,
-    },
-    opinion_customer: {
+    opinion_worker: {
       type: Sequelize.STRING,
     },
-    opinion_worker: {
+    opinion_customer: {
       type: Sequelize.STRING,
     },
     created_at: {
